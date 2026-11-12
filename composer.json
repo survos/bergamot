@@ -1,0 +1,30 @@
+{
+  "name": "survos/bergamot",
+  "type": "library",
+  "description": "Machine translation inside the PHP process: Bergamot (Marian) models through FFI, with sentence splitting and model management. No HTTP, no Python.",
+  "license": "MIT",
+  "keywords": ["translation", "machine translation", "bergamot", "marian", "ffi", "libretranslate"],
+  "autoload": {
+    "psr-4": {
+      "Survos\\Bergamot\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Survos\\Bergamot\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": "^8.5",
+    "ext-mbstring": "*"
+  },
+  "suggest": {
+    "ext-ffi": "Required to translate: the model is called through FFI.",
+    "ext-intl": "Sentence splitting with ICU's rules and abbreviation lists; without it a plain punctuation rule is used."
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^13.0"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
